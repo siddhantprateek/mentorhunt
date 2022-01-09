@@ -1,0 +1,24 @@
+
+.header-container{
+    background-color: #ced4da;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-container .button{
+    margin: .5rem 2%;
+}
+
+
+.button button {
+    padding: .5rem 2rem;
+    background-color: #faee1c;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.logo{
+    height: 40px;
+    padding: .2rem .2rem;
+}
+

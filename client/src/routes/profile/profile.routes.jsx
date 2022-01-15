@@ -1,7 +1,8 @@
-const Profile = () => {
+import TeacherProfile from "../../components/teacher-profile/teacherProfile.components"
+const Profile = ({teacher}) => {
     return(
         <div className="profile">
-            <h1>Profile</h1>
+            <TeacherProfile Name={teacher.Name} source={teacher.source}/>
         </div>
     )
 }

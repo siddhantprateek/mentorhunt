@@ -27,10 +27,4 @@ const App = () => {
   );
 }
 
-export default App
-
-// {
-//   data.map(teacher => (
-//     <Route path={`/${teacher.name.replace(" ", "")}`} element={<Profile />} />
-//   ))
-// }
+export default App;

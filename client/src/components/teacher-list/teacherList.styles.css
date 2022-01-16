@@ -1,5 +1,22 @@
 .teacher-list{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.input-div input {
+    width: 40rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    border-bottom: 2px solid gray;
+    background-color: transparent;
+    font-size: 1.4rem;
+}
+
+.input-div input:active{
+    border: none;
 }

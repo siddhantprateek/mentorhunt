@@ -1,11 +1,13 @@
 import './teacherList.styles.css';
 import TeacherBadge from '../teacherBadege/teacherBadge.components';
-import data from '../../assets/data.json';
-const TeacherList = () => {
+
+const TeacherList = ({teacher}) => {
     return(
         <div className="teacher-list">
-            {data.map((teacher) =>(
-                <TeacherBadge name={teacher.Name} source={teacher.source} />
+            {teacher.map((data) =>(
+                <a href={`/t/${data.Name.replaceAll(" ", "")}`}>
+                    <TeacherBadge name={data.Name} source={data.source} />
+                </a>
             ))}
         </div>
     )

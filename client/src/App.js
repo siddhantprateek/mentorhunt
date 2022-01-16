@@ -18,7 +18,7 @@ const App = () => {
         <Route path='/dashboard' element={<Dashboard />} />
         {
           data.map(teacher => (
-            <Route exact path={`/t/${teacher.Name.replace(" ", "")}`} element={<Profile teacher={teacher}/>} />
+            <Route exact path={`/t/${teacher.Name.replaceAll(" ", "")}`} element={<Profile teacher={teacher}/>} />
           ))
         }
         <Route path='*' element={<Nomatch/>}/>

@@ -6,6 +6,10 @@ h2, p, h3, h4 {
 h1 {
   font-family: 'Poppins', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
 body {
   margin: 0;
   padding: 0;

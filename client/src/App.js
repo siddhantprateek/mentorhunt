@@ -1,23 +1,30 @@
 
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
-import Home from './routes/home/home.routes'
-import Dashboard from './routes/dashboard/dashboard.routes'
-import Profile from './routes/profile/profile.routes'
-import Header from './components/header/header.components'
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './routes/home/home.routes';
+import Dashboard from './routes/dashboard/dashboard.routes';
+import Profile from './routes/profile/profile.routes';
+import Header from './components/header/header.components';
+import data from './assets/data.json';
+import Nomatch from './routes/nomatch/nomatch.routes';
 
+const App = () => {
 
-function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/dashboard' element={<Dashboard/>} />
-        <Route path='/profile' element={<Profile/>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        {
+          data.map(teacher => (
+            <Route exact path={`/t/${teacher.Name.replaceAll(" ", "")}`} element={<Profile teacher={teacher}/>} />
+          ))
+        }
+        <Route path='*' element={<Nomatch/>}/>
       </Routes>
     </div>
   );
 }
 
-export default App
+export default App;

@@ -17,6 +17,11 @@
     border-radius: 20px;
     cursor: pointer;
 }
+
+.button button::placeholder{
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+}
 .logo{
     height: 40px;
     padding: .2rem .2rem;

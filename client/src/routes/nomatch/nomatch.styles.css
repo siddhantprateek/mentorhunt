@@ -1,0 +1,7 @@
+.no-match {
+    display: flex;
+    justify-content: center;
+}
+.no-match img {
+    height: 40rem;
+}

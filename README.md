@@ -4,12 +4,18 @@
 </p>
 
 
+
+
+![](https://i.imgur.com/jwztWIC.png)
+                                                       
+![](https://i.imgur.com/h3yiQYT.png)
+                                                       
+![](https://i.imgur.com/anKVbc0.png)
+
+![](https://i.imgur.com/jwztWIC.png)
+    
 ## About
-A rating system to rate and review your teacher, place to know and learn from best teachers and pick the best ones.
-
-![](https://i.imgur.com/t8rSiFo.png)
-
-
+  A rating system to rate and review your teacher, place to know and learn from best teachers and pick the best ones.
 
 ## Tech Stack
  - [React](https://reactjs.org/)

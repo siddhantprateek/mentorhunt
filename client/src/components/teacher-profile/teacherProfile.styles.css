@@ -1,5 +1,15 @@
+.teacher-profile {
+    margin: 10vh;
+}
 .teacher-profile img {
     height: 250px;
     width: 250px;
     border-radius: 400px;
+}
+
+.teacher-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

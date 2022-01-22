@@ -1,1 +1,8 @@
+.home-img{
+    display: flex;
+    justify-content: flex-end;
+}
+.home-img img {
+    height: 40rem;
 
+}

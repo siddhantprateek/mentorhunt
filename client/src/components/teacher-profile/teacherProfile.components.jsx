@@ -7,7 +7,7 @@ const TeacherProfile = ({Name, source}) => {
                 <h2>{Name}</h2>
             </div>
             <div className="input-div">
-            <input 
+            <textarea 
                 type="text" 
                 placeholder='Enter your review'
                 />

@@ -4,7 +4,7 @@
   "description": "<p align=\"center\">\r     <img src=\"https://i.imgur.com/D4cdYCS.png\" height=\"100px >\r </p>",
   "main": "index.js",
   "scripts": {
-    "start:client": "cd client; npm run start",
+    "start:client": "cd client && npm run start",
     "start:backend": "cd server; npm run start",
     "dev": "concurrently \"cd client; react-scripts start\" \"cd server; nodemon server.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"

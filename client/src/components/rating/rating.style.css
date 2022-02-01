@@ -4,4 +4,7 @@
     padding: .5rem;
     background: transparent;
     font-size: large;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(97, 97, 97);
 }

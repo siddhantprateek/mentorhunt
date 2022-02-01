@@ -24,7 +24,7 @@ const editMessage = async (req, res) => {
         const {messageId: msgId} = req.params;
         const edit = await schema.findByIdAndUpdate({ _id: msgId }, req.body, {
             new: true,
-            runValidators:
+            runValidators: true
         })
         if (!edit) {
             return res.statusnode(404).json({ message: 'Message is not found' })

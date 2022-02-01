@@ -25,3 +25,5 @@ client/yarn-error.log*
 
 server/.env
 server/node_modules
+
+client/src/config.json

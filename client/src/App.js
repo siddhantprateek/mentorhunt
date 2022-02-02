@@ -31,7 +31,7 @@ const App = () => {
         { isAuthenticated && (
           <Route path='/' element={<Dashboard />} />
         )}
-        {
+        { isAuthenticated &&
           data.map(teacher => (
             <Route exact path={`/t/${teacher.Name.replaceAll(" ", "")}`} element={<Profile teacher={teacher}/>} />
           ))

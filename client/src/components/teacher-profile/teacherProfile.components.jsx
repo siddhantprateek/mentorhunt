@@ -10,6 +10,9 @@ const TeacherProfile = ({ Name, source }) => {
       <Rating/> 
       <div className="input-div">
         <textarea type="text" placeholder="Enter your review" />
+        <div className="button">
+          <button>POST</button>
+        </div>
       </div>
     </div>
   );

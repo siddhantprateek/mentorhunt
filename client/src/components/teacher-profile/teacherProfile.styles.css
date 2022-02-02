@@ -1,5 +1,6 @@
 .teacher-profile {
     margin: 10vh;
+    animation: transitionIn 1s;
 }
 .teacher-profile img {
     height: 250px;
@@ -17,7 +18,7 @@
 
 .input-div textarea {
     width: 100%;
-    height: 3rem;
+    height: rem;
     border: none;
     outline: none;
     padding: 0 20px;

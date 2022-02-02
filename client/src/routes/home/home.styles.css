@@ -7,13 +7,14 @@
 }
 .home-content img {
     height: 40rem;
-
+    animation: transitionIn 1s;
 }
 
 .content{
     margin-left: 2rem;
     margin-top: 10vh;
     width: 400px;
+    animation: transitionLeft 1s;
 }
 
 .content h1{

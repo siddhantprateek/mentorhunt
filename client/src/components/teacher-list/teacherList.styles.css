@@ -1,9 +1,12 @@
+
+
 .teacher-list{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    animation: transitionIn 1s;
 }
 
 .input-div input {

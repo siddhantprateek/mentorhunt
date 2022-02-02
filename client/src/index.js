@@ -7,23 +7,28 @@ import { BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { getConfig } from './config';
 import history from './utils/history';
-const onRedirectCallback = (appState) => {
-  history.pushState(
-    appState && appState.returnTo ? appState.returnTo : window.location.pathname
-  )
-}
 
+//!todo check whether it is unnecessary
+import * as serviceWorker from "./serviceWorker";
+
+const onRedirectCallback = (applicationState) => {
+  history.push(
+    applicationState && applicationState.returnTo ? applicationState.returnTo : window.location.pathname
+  );
+};
 
 const config = getConfig();
+const providerConfig = {
+  domain: config.domain,
+  clientId: config.clientId,
+  ...(config.audience ? { audience: config.audience } : null),
+  redirectUri: window.location.origin,
+  onRedirectCallback,
+};
+
 ReactDOM.render(
   <BrowserRouter>
-    <Auth0Provider
-      domain={config.domain}
-      clientId={config.domain}
-      audience={config.audience ? config.audience : null}
-      redirectUri={window.location.origin}
-      onRedirectCallback={onRedirectCallback}
-      >
+    <Auth0Provider {...providerConfig}>
       <React.StrictMode>
         <App />
       </React.StrictMode>
@@ -31,5 +36,6 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root')
 );
+serviceWorker.unregister();
 
 reportWebVitals();

@@ -1,8 +1,38 @@
-.home-img{
+
+.home-content{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 10vh;
+    flex-wrap: wrap;
 }
-.home-img img {
+.home-content img {
     height: 40rem;
 
+}
+
+.content{
+    margin-left: 2rem;
+    margin-top: 10vh;
+    width: 400px;
+}
+
+.content h1{
+    font-size: 4rem;
+
+}
+.content h3{
+    margin-top: -2rem;
+}
+.btn {
+    width: 6rem;
+}
+.btn button {
+    box-shadow: 5px 5px 2px  rgba(0, 0, 255, .2);
+    width: 100%;
+    padding: .5rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn button:active{
+    box-shadow: 2px 2px 2px  rgba(0, 0, 255, .2);
 }

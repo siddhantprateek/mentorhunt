@@ -9,19 +9,25 @@
     margin: .5rem 2%;
 }
 
-
 .button button {
     padding: .5rem 2rem;
     background-color: #faee1c;
-    border: none;
-    border-radius: 20px;
+    border: 1.5px solid grey;
     cursor: pointer;
+    box-shadow: 5px 5px 2px  rgba(0, 0, 255, .2);
+    font-family: "Poppins", sans-serif;
 }
 
-.button button::placeholder{
-    font-family: 'Questrial', sans-serif;
-    font-weight: 400;
+.button button:hover{
+    background-color: #eee200;
+
 }
+
+.button button:active{
+    box-shadow: 2px 2px 2px  rgba(0, 0, 255, .2);
+
+}
+
 .logo{
     height: 40px;
     padding: .2rem .2rem;

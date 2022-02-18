@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
-    const { isAuthenticated, loginWithRedirect, logout} = useAuth0();
+    const { user, isAuthenticated, loginWithRedirect, logout} = useAuth0();
 
     const logoutWithRedirect = () =>
         logout({
@@ -19,17 +19,23 @@ const Header = () => {
                         <img className='logo' src={Logo} alt="logo" />
                     </Link>
                 </div>
-  
-                { isAuthenticated && (
-                    <div className="button">
-                        <button onClick={() => logoutWithRedirect()}>Logout</button>
-                    </div>
-                )}
-                { !isAuthenticated && (
-                    <div className="button">
-                        <button onClick={() => loginWithRedirect()}>Sign In</button>
-                    </div>
-                )}
+                <div className='header-right'>
+                    {isAuthenticated && 
+                        <div className='profile-container'>
+                            <img className="profile-pic" src={user.picture} alt=''/>
+                        </div>
+                    }
+                    { isAuthenticated && (
+                        <div className="button">
+                            <button onClick={() => logoutWithRedirect()}>Logout</button>
+                        </div>
+                    )}
+                    { !isAuthenticated && (
+                        <div className="button">
+                            <button onClick={() => loginWithRedirect()}>Sign In</button>
+                        </div>
+                    )}
+                </div>
             </header>
         </div>
     )

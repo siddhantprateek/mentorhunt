@@ -9,6 +9,7 @@ const TeacherBadge = ({name, source}) => {
             <div className="badge-content">
                 <h3>{name}</h3>
             </div>
+            <hr/>
         </div>
     )
 }

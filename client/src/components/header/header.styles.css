@@ -8,8 +8,12 @@
 .header-container .button{
     margin: .5rem 2%;
 }
-
+.header-right{
+    display: flex;
+    margin-right: 1.5rem;
+}
 .button button {
+    width: 8rem;
     padding: .5rem 2rem;
     background-color: #faee1c;
     border: 1.5px solid grey;
@@ -32,4 +36,12 @@
     height: 40px;
     padding: .2rem .2rem;
 }
-
+.profile-container{
+    padding: .4rem 1rem;
+}
+.profile-pic{
+    height: 2.4rem;
+    border-radius: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}

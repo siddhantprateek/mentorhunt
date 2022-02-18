@@ -31,3 +31,10 @@
     color: rgb(117, 117, 117);
     text-align: center; 
 }
+
+hr {
+    width: 8rem;
+    border: 1px solid grey;
+    border-radius: 20px;
+    color: rgb(146, 146, 146);
+}

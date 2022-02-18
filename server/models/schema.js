@@ -6,8 +6,19 @@ const commentSchema = new mongoose.Schema({
         type: String,
         require: true 
     },
+    commentedTo: {
+        type: String,
+        require: true 
+    },
+    imgsrc: {
+        type: String,
+        require: true 
+    },
     rating: Number,
-    comment: String 
+    comment: {
+        type: String,
+        require: true 
+    } 
 });
 
-module.exports = mongoose.model('Comment', commentSchema);
+module.exports = mongoose.model('comment', commentSchema);

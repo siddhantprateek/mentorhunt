@@ -1,59 +1,75 @@
 const schema = require('../models/schema.js');
 
-const getMessages = async (req, res) => {
+const getAllComments = async (req, res) => {
     try {
-        const read = await schema.find({});
-        res.status(200).json({ read })
+        const comment = await schema.find({});
+        res.status(200).json({ comment })
     }
     catch (error) {
         res.status(200).json({ message: error.message })
     }
 }
 
-const postMessage = async (req, res) => {
+const getComment = async (req, res) => {
+    const { messageId: msgId } = req.params;
+    const comment = await schema.findOne({ _id: msgId })
     try {
-        const post = await schema.create(res.body);
-        res.status(201).json({ post })
-    } catch (error) {
-        res.status(500).json({ message: error.message })
-    }
-}
-
-const editMessage = async (req, res) => {
-    try {
-        const {messageId: msgId} = req.params;
-        const edit = await schema.findByIdAndUpdate({ _id: msgId }, req.body, {
-            new: true,
-            runValidators: true
-        })
-        if (!edit) {
+        if (!comment) {
             return res.statusnode(404).json({ message: 'Message is not found' })
         }
-        res.status(200).json({ edit })
+
+        res.status(200).json({ comment })
     } catch (error) {
         res.status(500).json({ message: error.message })
+
     }
 }
 
-const deleteMessage = async (req, res) => {
-    try {
-        const { messageId: msgId } = req.params;
-        const delmsg = await schema.findByIdAndDelete({ _id: msgId });
-
-        if (!delmsg) {
-            return res.status(404).json({ message: 'No items with that ID' })
+const postComments = async (req, res) => {
+        try {
+            const comment = await schema.create(req.body);
+            res.status(201).json({ comment })
+        } catch (error) {
+            res.status(500).json({ message: error.message })
         }
-
-        res.status(200).json({ delmsg })
-    } catch (error) {
-        res.status(500).json({ message: error.message })
     }
-}
+
+const editComments = async (req, res) => {
+        try {
+            const { messageId: msgId } = req.params;
+            const comment = await schema.findByIdAndUpdate({ _id: msgId }, req.body, {
+                new: true,
+                runValidators: true
+            })
+            if (!comment) {
+                return res.statusnode(404).json({ message: 'Message is not found' })
+            }
+            res.status(200).json({ comment })
+        } catch (error) {
+            res.status(500).json({ message: error.message })
+        }
+    }
+
+const deleteComments = async (req, res) => {
+        try {
+            const { messageId: msgId } = req.params;
+            const comment = await schema.findByIdAndDelete({ _id: msgId });
+
+            if (!comment) {
+                return res.status(404).json({ message: 'No items with that ID' })
+            }
+
+            res.status(200).json({ comment })
+        } catch (error) {
+            res.status(500).json({ message: error.message })
+        }
+    }
 
 
-module.exports = {
-    getMessages,
-    postMessage,
-    editMessage,
-    deleteMessage
-}
+    module.exports = {
+        getAllComments,
+        postComments,
+        editComments,
+        deleteComments,
+        getComment
+    }

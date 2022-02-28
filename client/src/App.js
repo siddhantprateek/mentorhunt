@@ -4,7 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/home/home.routes';
 import Dashboard from './routes/dashboard/dashboard.routes';
 import Profile from './routes/profile/profile.routes';
-import Header from './components/header/header.components';
+// import Header from './components/header/header.components';
+import { Header, Footer } from './components';
 import data from './assets/data.json';
 import Nomatch from './routes/nomatch/nomatch.routes';
 import { useAuth0 } from "@auth0/auth0-react";
@@ -38,6 +39,7 @@ const App = () => {
         }
         <Route path='*' element={<Nomatch/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }

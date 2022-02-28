@@ -16,6 +16,7 @@ const commentSchema = new mongoose.Schema({
     },
     rating: Number,
     comment: {
+        id: mongoose.isValidObjectId,
         type: String,
         require: true 
     } 

@@ -78,8 +78,8 @@ const TeacherProfile = ({ Name, source }) => {
         <div className="popup-box">
           <div className="box">
             <span className="close-icon" onClick={togglePopup}>x</span>
-            <h1>Confirm your Booking</h1>
-            <h3>Book Session with {Name}</h3>
+            <h1 className="cnf-h1">Confirm your Booking</h1>
+            <h3>Book Session with <span className="popup-name">{Name}</span></h3>
             <input type="text" 
               className="popup-input" 
               placeholder="Enter Meet Link"/>

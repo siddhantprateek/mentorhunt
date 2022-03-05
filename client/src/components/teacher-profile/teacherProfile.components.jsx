@@ -45,6 +45,9 @@ const popupOption = {
 
 const TeacherProfile = ({ Name, source }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [email, setEmail] = useState('')
+  const [link, setLink] = useState('')
+
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
@@ -75,30 +78,37 @@ const TeacherProfile = ({ Name, source }) => {
       </div>
 
       {isOpen &&
+      <form action="">
         <div className="popup-box">
           <div className="box">
             <span className="close-icon" onClick={togglePopup}>x</span>
             <h1 className="cnf-h1">Confirm your Booking</h1>
             <h3>Book Session with <span className="popup-name">{Name}</span></h3>
-            <input type="text" 
+            <input type="text"
+              value={link}
+              onChange={(e) => setLink(e.target.value)} 
               className="popup-input" 
-              placeholder="Enter Meet Link"/>
+              placeholder="Enter Meet Link"
+              required/>
             <h3>Enter your Email Address</h3>
-            <input type="email" 
+            <input type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} 
               className="popup-input" 
-              placeholder="✉️ Get Invite link in your Email"/>
+              placeholder="✉️ Get Invite link in your Email"
+              required/>
             <h3>Add Comments</h3>
-
             <textarea className="popup-input"  
             placeholder=" - Share your Session Agenda 
             - Share Tips
             - Share your Roll Number
             - Any Topice like to Discuss" cols="30" rows="10"></textarea>
             <div className="meet-btn">
-              <button className="popup-call">Schedule Call</button>
+              <button className="popup-call" disabled={!email || !link} onClick={() => {console.log('scheduled')}}>Schedule Call</button>
             </div>
           </div>
         </div>
+      </form>
       }
     </div>
   );

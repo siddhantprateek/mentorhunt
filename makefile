@@ -4,3 +4,6 @@ setup-libs:
 
 hello:
 	@echo "Welcome to Rteach"
+
+serve-client:
+	cd client; npm run start;

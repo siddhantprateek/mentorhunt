@@ -1,0 +1,34 @@
+.butn button {
+  padding: 0.5rem 2rem;
+  border: 1.5px solid grey;
+  cursor: pointer;
+  box-shadow: 5px 5px 2px rgba(0, 0, 255, 0.2);
+  font-family: "Poppins", sans-serif;
+  margin-right: 1rem;
+}
+
+.green {
+  background-color: #1cfa92;
+}
+.green:hover {
+  background-color: #2bbd79;
+}
+
+.blue {
+  background-color: rgb(82, 193, 245);
+}
+.blue:hover {
+  background-color: rgb(86, 149, 201);
+}
+
+.yellow {
+  background-color: rgb(231, 252, 49);
+}
+.yellow:hover {
+  background-color: rgb(181, 192, 30);
+}
+
+
+.butn button:active {
+  box-shadow: 2px 2px 2px rgba(0, 0, 255, 0.2);
+}

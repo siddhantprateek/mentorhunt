@@ -46,9 +46,6 @@ hr {
     height: 6rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-
-    animation: transitionIn 1s;
-
 }
 
 .badge-bg:hover{

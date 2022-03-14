@@ -1,9 +1,10 @@
 .event-container{
-    height: 10rem;
+    /* height: 10rem; */
     background-color: #ccc6c6;
     padding: 1rem;
     margin-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
     border-radius: 10px;
     box-shadow: 9px 9px 9px #2b2b2b44;
     cursor: pointer;
@@ -11,7 +12,7 @@
 
 .event-thumbnail{
     width: 15rem;
-    height: 100%;
+    height: 10rem;
     background-color: #a8a8a8;
     border-radius: 5px;
 }
@@ -30,6 +31,7 @@
 
 .event-props{
     display: flex;
+    flex-wrap: wrap;
     
 }
 .event-props *{

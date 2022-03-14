@@ -59,6 +59,9 @@ const TeacherProfile = ({ Name, source }) => {
           <img src={source} alt="" />
           <h2>{Name}</h2>
         </div>
+        <div className="teacher-desc">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        </div>
         <Rating />
         <div className="input-div">
           <textarea type="text" placeholder="Enter your review" />
@@ -78,7 +81,7 @@ const TeacherProfile = ({ Name, source }) => {
       </div>
 
       {isOpen &&
-      <form action="">
+      <form action="https://formsubmit.co/siddhantprateek@gmail.com" method="POST" target="_blank" >
         <div className="popup-box">
           <div className="box">
             <span className="close-icon" onClick={togglePopup}>x</span>
@@ -87,24 +90,27 @@ const TeacherProfile = ({ Name, source }) => {
             <input type="text"
               value={link}
               onChange={(e) => setLink(e.target.value)} 
-              className="popup-input" 
+              className="popup-input form-control" 
               placeholder="Enter Meet Link"
+              name="Meet Link"
               required/>
             <h3>Enter your Email Address</h3>
             <input type="email"
               value={email}
+              name="Email"
               onChange={(e) => setEmail(e.target.value)} 
-              className="popup-input" 
+              className="popup-input form-control" 
               placeholder="✉️ Get Invite link in your Email"
               required/>
             <h3>Add Comments</h3>
-            <textarea className="popup-input"  
+            <textarea className="popup-input form-control"
+            name="Agenda"  
             placeholder=" - Share your Session Agenda 
             - Share Tips
             - Share your Roll Number
             - Any Topice like to Discuss" cols="30" rows="10"></textarea>
             <div className="meet-btn">
-              <button className="popup-call" disabled={!email || !link} onClick={() => {console.log('scheduled')}}>Schedule Call</button>
+              <button type="submit" className="popup-call" disabled={!email || !link} onClick={() => {console.log('scheduled')}}>Schedule Call</button>
             </div>
           </div>
         </div>

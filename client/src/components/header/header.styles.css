@@ -1,12 +1,17 @@
 
 .header-container{
-    background-color: #ced4da;
+    background-color: #ced4da4d;
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
 }
 .header-container .button{
-    margin: .5rem 2%;
+    margin-top: .5rem;
 }
 .header-right{
     display: flex;

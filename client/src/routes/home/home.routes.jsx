@@ -15,6 +15,19 @@ const Home = () => {
                 </div>
                 <img src={BgImg} alt="" />
             </div>
+            <div className="about-section">
+                <h1>About</h1>
+                <hr />
+                <p>Schedule and Connect with your domain specific Mentors.</p>
+            </div>
+            <div className="ui-image-container">
+                <div className="image-section">
+                    <div className='ui-contents'>
+                        <h2>Get Mentored from your favorite teacher.</h2>
+                    </div>
+
+                </div>
+            </div>
         </div>
     )
 }

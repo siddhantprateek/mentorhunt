@@ -60,5 +60,10 @@ hr {
 .view-pro{width: 100%;}
 .view-pro:hover{background-color: rgba(168, 168, 168, 0.541);}
 .badge-btn{
-    margin-top: 6rem;
+    margin-top: 4rem;
+}
+
+
+.rating-container {
+    text-align: center;
 }

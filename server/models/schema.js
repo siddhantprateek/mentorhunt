@@ -2,24 +2,23 @@ const mongoose= require('mongoose');
 
 
 const commentSchema = new mongoose.Schema({
-    name : {
-        type: String,
-        require: true 
-    },
     commentedTo: {
         type: String,
-        require: true 
-    },
-    imgsrc: {
-        type: String,
-        require: true 
+        require: true
     },
     rating: Number,
-    comment: {
-        id: mongoose.isValidObjectId,
-        type: String,
-        require: true 
-    } 
+    comments: [{
+        postedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+        name: {
+            type: String,
+            required: true
+        },
+        imgsrc: {
+            type: String,
+            require: true 
+        },
+        text: String,
+    }]
 });
 
 module.exports = mongoose.model('comment', commentSchema);

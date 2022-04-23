@@ -2,22 +2,20 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 const cors = require('cors')
-
+// app configuration
 dotenv.config();
 const routes = require('./routes/routes.js');
 const PORT = process.env.PORT || 4000;
 
 const app = express();
 
-// app.get('/', (req, res) => {
-//     res.send('Server is Running perfect')
-// })
-
+// middleware
 app.use(express.json())
-
 app.use(cors({
     origin: 'http://localhost:3000'
 }))
+
+// routes
 
 app.use((req, res, next)=> {
     res.header('Access-Control-Allow-Origin', '*');

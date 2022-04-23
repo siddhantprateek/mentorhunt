@@ -6,14 +6,14 @@ const commentSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    rating: Number,
+    avg_rating: Number,
     comments: [{
-        postedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+        rating: Number,
         name: {
             type: String,
             required: true
         },
-        imgsrc: {
+        user_imgsrc: {
             type: String,
             require: true 
         },

@@ -2,10 +2,18 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 const cors = require('cors')
+const path  = require('path')
 // app configuration
 dotenv.config();
 const routes = require('./routes/routes.js');
 const PORT = process.env.PORT || 4000;
+
+// route
+app.use(express.static(__dirname, './client/build'))
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './client/build', 'index.html'))
+})
+
 
 const app = express();
 

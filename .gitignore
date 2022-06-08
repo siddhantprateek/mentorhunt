@@ -27,3 +27,4 @@ server/.env
 server/node_modules
 
 client/src/config.json
+.env

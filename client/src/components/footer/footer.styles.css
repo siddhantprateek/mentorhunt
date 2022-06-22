@@ -1,0 +1,15 @@
+.footer{
+    bottom: unset;
+    background-color: rgb(207, 207, 207);
+    margin-top: 20%;
+}
+
+.footer-container{
+    padding: 2rem;
+    display: flex;
+}
+
+.right-footer{
+    padding: 0 10px;
+    margin-top: -.5rem;
+}

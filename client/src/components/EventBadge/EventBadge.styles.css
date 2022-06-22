@@ -1,0 +1,39 @@
+.event-container{
+    /* height: 10rem; */
+    background-color: #ccc6c6;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 9px 9px 9px #2b2b2b44;
+    cursor: pointer;
+}
+
+.event-thumbnail{
+    width: 15rem;
+    height: 10rem;
+    background-color: #a8a8a8;
+    border-radius: 5px;
+}
+
+.event-contents{
+    padding: .5rem;
+    line-height:0;
+    width: 80%;
+}
+
+.event-contents hr {
+    height: 2px;
+    border-bottom: 3px solid black;
+    width: 100%;
+}
+
+.event-props{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.event-props *{
+ margin-right: 1rem;
+}

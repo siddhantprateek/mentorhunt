@@ -1,0 +1,11 @@
+.event-page{
+    padding: 2rem 4rem;
+}
+
+.event-schedule {
+    display: flex;
+    justify-content: flex-end;
+}
+.event-schedule * {
+    margin-left: .1rem;
+}

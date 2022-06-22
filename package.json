@@ -1,0 +1,34 @@
+{
+  "name": "rteach",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r     <img src=\"https://i.imgur.com/D4cdYCS.png\" height=\"100px >\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "cd client && npm run start",
+    "server": "nodemon index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "concurrently \"cd client; react-scripts start\" \"cd server; nodemon server.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddhantprateek/rteach.git"
+  },
+  "proxy": "http://localhost:4000",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siddhantprateek/rteach/issues"
+  },
+  "homepage": "https://github.com/siddhantprateek/rteach",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^14.1.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

@@ -6,6 +6,10 @@
 
 
 
+
+
+
+
 ![](https://i.imgur.com/jwztWIC.png)
                                                        
 ![](https://i.imgur.com/h3yiQYT.png)
@@ -21,7 +25,10 @@
  - [React](https://reactjs.org/)
  - [Node Js ](https://nodejs.org/en/) and [Express Js](https://expressjs.com/)
  - **Database not yet decided*
- 
+
+## Preview                                                       
+                                                       
+https://user-images.githubusercontent.com/43869046/156356835-ce86d515-903b-49ee-94c1-1de93a2b955e.mp4
 
 ## Stargazers
 *If you’re using RTEACH or if you like the project, please ★ star this repository to show your support!*

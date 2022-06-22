@@ -1,29 +1,54 @@
 
 .header-container{
-    background-color: #ced4da;
+    background-color: #ced4da4d;
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    padding: .4rem 0;
 }
 .header-container .button{
-    margin: .5rem 2%;
+    margin-top: .5rem;
 }
-
-
+.header-right{
+    display: flex;
+    margin-right: 1.5rem;
+}
 .button button {
+    width: 8rem;
     padding: .5rem 2rem;
     background-color: #faee1c;
-    border: none;
-    border-radius: 20px;
+    border: 1.5px solid grey;
     cursor: pointer;
+    box-shadow: 5px 5px 2px  rgba(0, 0, 255, .2);
+    font-family: "Poppins", sans-serif;
 }
 
-.button button::placeholder{
-    font-family: 'Questrial', sans-serif;
-    font-weight: 400;
+.button button:hover{
+    background-color: #eee200;
+
 }
+
+.button button:active{
+    box-shadow: 2px 2px 2px  rgba(0, 0, 255, .2);
+
+}
+
 .logo{
     height: 40px;
     padding: .2rem .2rem;
 }
-
+.profile-container{
+    padding: .4rem .2rem;
+}
+.profile-pic{
+    margin-right: -3rem;
+    height: 2.4rem;
+    border-radius: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}

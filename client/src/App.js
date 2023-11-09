@@ -25,18 +25,14 @@ const App = () => {
 
         { !isAuthenticated && (<Route path='/' element={<Home />} />)}
         
-        { isAuthenticated && (
-          <Route path='/' element={<Dashboard />} />
-        )}
-        { isAuthenticated &&
+        <Route path='/dashboard' element={<Dashboard />} />
+        {
           data.map(teacher => (
             <Route exact path={`/t/${teacher.Name.replaceAll(" ", "")}`} element={<Profile teacher={teacher}/>} />
           ))
         }
         <Route path='*' element={<Nomatch/>}/>
-        { isAuthenticated && (
-          <Route path='/events' element={<Events />} />
-        )}
+        <Route path='/events' element={<Events />} />
       </Routes>
       <Footer/>
     </div>

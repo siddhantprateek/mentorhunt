@@ -34,7 +34,7 @@ const App = () => {
         <Route path='*' element={<Nomatch/>}/>
         <Route path='/events' element={<Events />} />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
